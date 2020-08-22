@@ -25,7 +25,7 @@ SECRET_KEY = 'c^%c2p_^mfyvh_dj)3w**&o0(i)6jq^xw6p9+uy5pyw2-yo(0k'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -152,3 +152,10 @@ SOCIALACCOUNT_PROVIDERS = {
 CELERY_BROKER_URL = 'redis://h:p98caa8c87dde5b4010cc46624690499c3fd1fd1493bcefb871f2cad78422e0ee@ec2-54-75-151-90.eu-west-1.compute.amazonaws.com:29529'
 CELERY_ACCEPT_CONTENT = ['json']
 CELERY_TASK_SERIALIZER = 'json'
+
+EMAIL_HOST = 'smtp.fastmail.com'
+EMAIL_PORT = 465
+EMAIL_HOST_USER = 'onuraydin@fastmail.com'
+EMAIL_HOST_PASSWORD = 'fs7gfx9ysdb7fdmr'
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = True
