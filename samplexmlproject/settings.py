@@ -147,3 +147,8 @@ SOCIALACCOUNT_PROVIDERS = {
         }
     }
 }
+
+
+CELERY_BROKER_URL = 'redis://h:p98caa8c87dde5b4010cc46624690499c3fd1fd1493bcefb871f2cad78422e0ee@ec2-54-75-151-90.eu-west-1.compute.amazonaws.com:29529'
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TASK_SERIALIZER = 'json'
