@@ -4,5 +4,5 @@ from .tasks import sleepy, sendemailtask, parseXML
 # Create your views here.
 
 def xmlapp(request):
-    parseXML.delay('https://www.w3schools.com/xml/plant_catalog.xml')
+    parseXML.delay('default','https://www.w3schools.com/xml/plant_catalog.xml')
     return HttpResponse('Done!')
