@@ -1,9 +1,11 @@
 {%load static%}
 {% load socialaccount %}
+{% load crispy_forms_tags %}
+
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-	<title>EndGam - Gaming Magazine Template</title>
+	<title>Criwizard</title>
 	<meta charset="UTF-8">
 	<meta name="description" content="EndGam Gaming Magazine Template">
 	<meta name="keywords" content="endGam,gGaming, magazine, html">
@@ -51,13 +53,14 @@
 				<nav class="top-nav-area w-100">
 					<div class="user-panel">
                         {% if user.is_authenticated %}
-                            <p>Welcome, {{ user.username }} !</p>
+							<p>Welcome, {{ user.username }} !    <a href="{% url 'account_logout' %}">Sign Out</a></p>
+							
  
                         {% else %}
-                            <a href="{% provider_login_url 'google' %}">Login with Google</a>
-                            <a href="#">Z</a><i class="fa fa-google"></i>
-						<a href="">Login</a> / <a href="">Register</a>
-                            {% endif %}
+								
+							<a href="{% provider_login_url 'google' %}"><i class="fa fa-google"></i> Login with Google</a>
+                            
+                        {% endif %}
                         
 					</div>
 					<!-- Menu -->
@@ -75,8 +78,6 @@
 			<div class="hero-item set-bg d-flex align-items-center justify-content-center text-center" data-setbg="{% static 'social_app/img/slider-bg-1.jpg' %}">
 				<div class="container">
 					<h2>Criwizard</h2>
-					<p>Fusce erat dui, venenatis et erat in, vulputate dignissim lacus. Donec vitae tempus dolor,<br>sit amet elementum lorem. Ut cursus tempor turpis.</p>
-					<a href="#" class="site-btn">Read More  <img src="{% static 'social_app/img/icons/double-arrow.png' %}" alt="#"/></a>
 				</div>
 			</div>
 
@@ -85,7 +86,8 @@
 	<!-- Hero section end-->
 
 	{% if user.is_authenticated %}
-		{% include "xml_app/xmlapp.html" %}
+		{% block content %}
+		{% endblock %}
 	{% endif %}
 
 

@@ -1,5 +1,5 @@
 from django.urls import path
 from . import views
 urlpatterns = [
-    path('', views.xmlapp, name="xmlapp"),
+    path('', views.multiple_forms, name="xmlapp"),
 ]

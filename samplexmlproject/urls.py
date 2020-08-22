@@ -19,8 +19,8 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('', include('social_app.urls')),
-    path('xmlapp', include('xml_app.urls')),
+    #path('', include('social_app.urls')),
+    path('', include('xml_app.urls')),
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
 ]

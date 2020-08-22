@@ -1,13 +1,16 @@
-{%load static%}
-{% load socialaccount %}
-<!-- Newsletter section -->
-<section class="newsletter-section">
-	<div class="container">
-		<h2>Upload your XML</h2>
-		<form class="newsletter-form">
-			<input type="text" placeholder="ENTER YOUR XML LINK">
-			<button class="site-btn">Upload  <img src="{% static 'social_app/img/icons/double-arrow.png' %}" alt="#"/></button>
-		</form>
-	</div>
-</section>
-<!-- Newsletter section end -->
+{% extends 'social_app/home.html' %}
+{% block content %}
+	{%load static%}
+	{% load socialaccount %}
+	{% load crispy_forms_tags %}
+
+	<section class="newsletter-section">
+		<div class="container">
+			<h2>Upload your XML</h2>
+			{% crispy upload_form upload_form.helper %}
+			<h2>Change Text Inside  XML File</h2>
+			{% crispy changetext_form changetext_form.helper %}
+
+		</div>
+	</section>
+{% endblock %}

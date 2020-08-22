@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
     'social_app',
-    'xml_app'
+    'xml_app',
+    'crispy_forms'
 ]
 
 MIDDLEWARE = [
@@ -160,3 +161,6 @@ EMAIL_HOST_USER = 'onuraydin@fastmail.com'
 EMAIL_HOST_PASSWORD = 'fs7gfx9ysdb7fdmr'
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
+
+
+CRISPY_TEMPLATE_PACK = 'bootstrap3'

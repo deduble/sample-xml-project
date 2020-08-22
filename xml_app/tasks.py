@@ -48,6 +48,7 @@ def helperParseXML(xmlFile, parent,child):
     for childOfChild in child:
         helperParseXML(xmlFile, newElement,childOfChild)
 
+
 @shared_task
 def parseXML(name, url):
     r = requests.get(url, allow_redirects=True)
@@ -63,3 +64,4 @@ def parseXML(name, url):
 
     print(root.tag)
     return None
+
